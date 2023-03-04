@@ -1,4 +1,11 @@
-/* Add your class here */
+.page {
+  min-width: 1100px;
+  max-width: 1600px;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
 .header {
   height: 100vh;
@@ -12,42 +19,59 @@
 }
 
 .nav {
-  /* Add flex properties here */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .logo {
+  height: 60px;
+  width: 196px;
 }
 
 .nav__links {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 8px;
+  display: flex;
+  font-size: 8px;
+  column-gap: 20px;
+  justify-content: right;
+  float: right;
+  list-style-type: none;
+  padding: 0;
 }
 
 .nav__link {
-  color: #000000;
   text-decoration: none;
   font-weight: bold;
+  margin-top: 8px;
+  color: #000000;
 }
 
-/* Add the hover state styles for .nav__link here */
+.nav__link:hover {
+  color: #1f69c9;
+}
 
 .header__title {
   font-size: 66px;
   line-height: 76px;
   font-weight: 500;
-  margin: 150px 0 0;
+  margin-top: 150px;
+  margin-bottom: 32px;
+  max-width: 544px;
 }
 
 .header__description {
   font-size: 20px;
   line-height: 30px;
-  margin: 32px 0 0;
+  top: 0px;
+  width: 532px;
 }
 
 .header__image {
-  /* Write styles here */
+  position: absolute;
   z-index: 1;
+  max-width: 636px;
+  top: 135px;
+  right: 20px;
 }
 
 .header__footer {
@@ -66,82 +90,24 @@
   color: #2f80ed;
   text-decoration: none;
 }
-
-/* Add the hover state styles for .header__link here */
-
+.header__link:hover {
+  color: #1f69c9;
+}
 .header__address {
   margin: 0;
   color: #838383;
 }
-
-.staff {
-  padding-top: 100px;
-  padding-bottom: 140px;
-  background-color: #f2f2f2;
-}
-
-.staff__title {
-  text-align: center;
-  font-size: 44px;
-  line-height: 52px;
-  margin: 0 0 24px;
-}
-
-.staff__subtitle {
-  text-align: center;
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 400;
-  margin: 24px 0 0;
-}
-
-/* Add the CSS rule for your new class here. Make sure to place it before .card: parents should precede their children */
-
-.card {
-  background-color: #fff;
-  border-radius: 6px;
-  padding: 32px 40px 20px 32px;
-  box-sizing: border-box;
-}
-
-.card__content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.card__title {
-  font-size: 20px;
-  line-height: 30px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.card__text {
-  margin: 20px 0 0;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.card__footer {
-  margin: 0;
-  font-size: 14px;
-  line-height: 20px;
-  color: #838383;
-  /* Auto margins applied on a flex item automatically extend specified margin to occupy the extra space in the flex container */
-  /* In our case, this pushes the element down to the bottom */
-  margin-top: auto;
-}
-
 .events {
   padding: 100px 0 120px 80px;
   display: flex;
   align-items: start;
   justify-content: space-between;
   box-sizing: border-box;
+  background-color: #f2f2f2;
 }
-
+.events:hover {
+  color: #1f69c9;
+}
 .events__content {
   flex-basis: 580px;
 }
@@ -175,6 +141,8 @@
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 12px;
+  width: 24px;
+  height: 24px;
 }
 
 .event-info__icon_type_calendar {
@@ -201,69 +169,155 @@
   color: #2f80ed;
   text-decoration: none;
 }
-
-/* Add the hover state styles for .events__more here */
+.events__more:hover {
+  color: #1f69c9;
+}
 
 .events__cover {
-  /* flex-grow: 1;
+  flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 780px;
   max-width: 780px;
-  position: relative; */
+  position: relative;
 }
 
 .events__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person {
-  /* position: absolute;
+  position: absolute;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 10px; */
+  gap: 10px;
+  left: 300px;
 }
 
 .person_name_feynman {
-  /* Use correct values of top/right/bottom/left properties to position the element */
+  left: 319px;
+  top: -30px;
 }
 
 .person_name_burbidge {
-  /* Use correct values of top/right/bottom/left properties to position the element */
+  top: 96px;
+  right: 125px;
+  margin-left: 200px;
 }
 
 .person_name_cannon {
-  /* Use correct values of top/right/bottom/left properties to position the element */
+  right: 216px;
+  bottom: 18px;
+  margin-left: 136px;
 }
 
 .person_name_mitchell {
-  /* Use correct values of top/right/bottom/left properties to position the element */
+  left: 142px;
+  bottom: 82px;
 }
 
 .person_name_tarter {
-  /* Use correct values of top/right/bottom/left properties to position the element */
+  top: 79px;
+  left: 159px;
 }
 
 .person__image {
-  /* max-width: 100%; */
+  max-width: 100%;
 }
 
 .person__image_size_l {
-  /* width: 140px; */
+  width: 140px;
 }
 
 .person__image_size_m {
-  /* width: 100px; */
+  width: 100px;
 }
 
 .person__image_size_s {
-  /* width: 80px; */
+  width: 80px;
 }
 
 .person__caption {
-  /* text-align: center;
+  text-align: center;
   font-size: 14px;
-  margin: 0; */
+  margin: 0;
+}
+
+.staff__cards {
+  max-width: 760px;
+  margin-top: 68px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 40px;
+  margin-left: 220px;
+}
+
+.staff {
+  padding-top: 100px;
+  padding-bottom: 140px;
+  background-repeat: no-repeat;
+  position: relative;
+  background-image: url(../images/staff_picks_background.jpg);
+  background-size: 100% 100%;
+}
+
+.staff__title {
+  text-align: center;
+  font-size: 44px;
+  line-height: 52px;
+  margin: 0 0 24px;
+  color: #ffffff;
+  font-size: x-large;
+}
+
+.staff__subtitle {
+  text-align: center;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  margin: 24px 0 0;
+  color: #ffffff;
+  font-size: small;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 6px;
+  padding: 32px 40px 20px 32px;
+  box-sizing: border-box;
+  width: 360px;
+  height: 420px;
+  display: flex;
+}
+
+.card__content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__title {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.card__text {
+  margin: 20px 0 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.card__footer {
+  margin: 0;
+  font-size: 14px;
+  line-height: 20px;
+  color: #838383;
+  margin-top: auto;
 }
 
 .membership {
@@ -285,20 +339,25 @@
   list-style-type: none;
   padding: 0;
   margin: 100px 0 0;
-  /* Add styles */
+  justify-content: center;
+  flex-basis: initial;
+  margin-left: 140px;
 }
 
 .step {
-  /* Add styles */
+  width: 220px;
+  flex-basis: auto;
+  display: inline-table;
+  margin-right: 40px;
 }
 
 .step__title {
   margin: 0;
+  margin-block-start: 0%;
   font-size: 20px;
   line-height: 30px;
   font-weight: 700;
-  display: flex;
-  align-items: center;
+  display: block;
 }
 
 .step__icon {
@@ -316,6 +375,7 @@
   overflow: hidden;
   position: relative;
   box-sizing: border-box;
+  display: flex;
 }
 
 .about__title {
@@ -324,6 +384,7 @@
   line-height: 30px;
   font-weight: 500;
   z-index: 1;
+  max-width: 154px;
 }
 
 .about__content {
@@ -331,10 +392,14 @@
   line-height: 30px;
   font-weight: 400;
   max-width: 660px;
+  margin-left: 120px;
+  z-index: 1;
+  padding: 5px;
 }
 
 .about__paragraph {
   margin: 0;
+  margin-bottom: 32px;
 }
 
 .about__circle {
@@ -342,46 +407,66 @@
   width: 495px;
   height: 495px;
   border-radius: 50%;
+  top: -121px;
+  left: -91px;
+  position: absolute;
 }
 
 .footer {
   box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 60px 102px 60px 80px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .footer__columns {
+  display: flex;
 }
 
 .footer__column_content_hours {
+  margin-left: auto;
 }
 
 .footer__column_content_social {
+  margin-left: 100px;
 }
 
 .footer__logo {
+  width: 116px;
+  height: 21px;
 }
 
 .footer__list {
-  /* The code below removes the default browser styles for lists */
-  list-style-type: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .footer__list-item {
+  margin-bottom: 16px;
+  list-style-type: none;
 }
-
 .footer__column-heading {
+  margin: 0 0 20px;
 }
 
 .footer__column-link {
   color: white;
-  font-size: 16px;
-  line-height: 20px;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.footer__column-link:hover {
+  color: #c1c1c1;
 }
 
 .footer__social-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
 }
 
 .footer__copyright {
+  margin: 108px 0 0;
 }
