@@ -32,8 +32,7 @@
 
 .nav__links {
   display: flex;
-  margin: 0px;
-  margin-top: 8px;
+  margin: 8px 0 0;
   column-gap: 20px;
   justify-content: right;
   list-style-type: none;
@@ -341,7 +340,6 @@
 
 .step {
   flex-basis: 220px;
-  justify-content: center;
   margin-right: 40px;
 }
 
@@ -398,9 +396,10 @@
   margin-bottom: 32px;
 }
 
-.margin__paragraph:last-child {
+.about__paragraph:last-child {
   margin: 0;
 }
+
 .about__circle {
   background-color: #2f80ed;
   width: 495px;
@@ -444,7 +443,12 @@
 }
 
 .footer__list-item {
+  margin-bottom: 16px;
   list-style-type: none;
+}
+
+.footer__list-item:last-child {
+  margin-bottom: 0px;
 }
 
 .footer__column-heading {
